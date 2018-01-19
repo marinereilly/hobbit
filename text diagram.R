@@ -1,5 +1,5 @@
-#from http://github.com/halhen/viz-pub/blob/master/sentence-drawings/code.nb.html
-
+#modified from http://github.com/halhen/viz-pub/blob/master/sentence-drawings/code.nb.html
+#packages
 library(tidyverse)
 library(tidytext)
 library(stringr)
@@ -7,7 +7,7 @@ library(colorRamps)
 library(colorspace)
 library(viridis)
 library(wordcloud)
-
+#load text and create plot
 text<-readLines("Hobbit.txt")
 df<-tibble(text) %>% 
   unnest_tokens(sentence, text, token = 'sentences') %>% 
